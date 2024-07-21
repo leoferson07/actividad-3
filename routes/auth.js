@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const loginController = require("../controladores/auth");
 
-
+//vista
 router.get('/', (req, res) => {
     res.render('login');
   });
