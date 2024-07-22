@@ -2,9 +2,7 @@ var express = require('express');
 var router = express.Router();
 const accounts = require("../controladores/accounts.c");
 
-router.get('/add', (req, res) => {
-  res.render('addAccounts'); // Puedes pasar mensajes de error si es necesario
-});
+
 router.get('/', async (req, res) => {
   try {
     const result = await accounts.mostrar();
