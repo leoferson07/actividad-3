@@ -1,12 +1,11 @@
 const { DataTypes } = require('sequelize');
 
-module.exports = (sequelize) => {
-  const Accounts = sequelize.define("Accounts",{
+module.exports = (sequelize) => sequelize.define("Accounts",{
     id:{
        type: DataTypes.INTEGER,
        primaryKey: true,
        allowNull: false,
-       autoIncrement: true
+       autoIncrement: false
     },
     numeroCuenta:{
        type: DataTypes.STRING,
@@ -29,5 +28,4 @@ module.exports = (sequelize) => {
        allowNull: false
     },
 },{timestamps: false, freezeTableName: true})
-return Accounts
-};
+

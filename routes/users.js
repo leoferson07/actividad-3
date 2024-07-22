@@ -2,9 +2,7 @@ var express = require('express');
 var router = express.Router();
 const usuarios = require('../controladores/users.c');
 
-router.get('/add', (req, res) => {
-  res.render('createUsers');
-});
+
 router.post("/", async (req, res)=>{
   try {
       const { id, nombre, contraseña, rol} = req.body;
